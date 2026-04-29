@@ -20,14 +20,22 @@ begin
     writeln
 end;
 
+procedure NegotiateSize(var res: integer);
 var
-    n, k, h: integer;
+    h: integer;
 begin
     repeat
         write('Enter the diamond''s height (positive odd): ');
-        readln(h);
+        readln(h)
     until (h > 0) and (h mod 2 = 1);
-    n := h div 2;
+    res := h
+end;
+
+var {main program starts here}
+    n, k: integer;
+begin
+    NegotiateSize(n);
+    n := n div 2;
     for k := 1 to n + 1 do
         PrinteLineOfDiamond(k, n);
     for k := n downto 1 do
