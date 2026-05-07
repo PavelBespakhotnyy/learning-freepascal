@@ -1,0 +1,5 @@
+This is a test file
+To test my program
+That calculates
+Amount of characters in every line
+Until the end of the file
